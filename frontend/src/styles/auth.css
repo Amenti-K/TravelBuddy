@@ -1,0 +1,409 @@
+:root {
+    --primary-color: #4CAF50;  /* Green */
+    --accent-color: #45a049;   /* Darker Green */
+    --button-hover-color: #357a38;
+    --text-color: #333;
+  }
+  
+  /* Global reset and base styles */
+  .login-signup * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .login-signup {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-signup .container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    margin: 20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-signup .container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+  }
+  
+  .login-signup .container span {
+    font-size: 12px;
+  }
+  
+  .login-signup .container a {
+    color: var(--accent-color);
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+  }
+  
+  .login-signup .container .button {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .login-signup .button:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .login-signup .container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-signup .container input {
+    background-color: #f0f0f0;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .login-signup .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .login-signup .form-container h1 {
+    color: var(--accent-color);
+  }
+  
+  .login-signup .sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+  }
+  
+  .login-signup .container.active .sign-in {
+    transform: translateX(100%);
+  }
+  
+  .login-signup .sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .login-signup .container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+  }
+  
+  @keyframes move {
+    0%,
+    49.99% {
+      opacity: 0;
+      z-index: 1;
+    }
+    50%,
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  
+  .login-signup .social-icons {
+    margin: 20px 0;
+  }
+  
+  .login-signup .social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .login-signup .toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 10% 0 0 10%;
+    z-index: 1000;
+  }
+  
+  .login-signup .container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 10% 10% 0;
+  }
+  
+  .login-signup .toggle {
+    background-color: var(--primary-color);
+    height: 100%;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .login-signup .container.active .toggle {
+    transform: translateX(50%);
+  }
+  
+  .login-signup .toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .login-signup .toggle-left {
+    transform: translateX(-200%);
+  }
+  
+  .login-signup .container.active .toggle-left {
+    transform: translateX(0);
+  }
+  
+  .login-signup .toggle-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  .login-signup .container.active .toggle-right {
+    transform: translateX(200%);
+  }
+  
+  .login-signup .btn {
+    background-color: var(--accent-color);
+    width: 80px;
+    height: 40px;
+    border-radius: 12px;
+    color: white;
+    border: 1px outset white;
+    text-transform: uppercase;
+  }
+  
+  .login-signup .btn:hover {
+    background-color: rgba(255, 255, 255, 0.807);
+    border: 1px solid black;
+    color: black;
+  }
+  
+  .login-signup .sign-in .in:hover {
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .login-signup .sign-in input {
+    width: 250px;
+  }
+  
+  .login-signup .sign-up .input:hover {
+    background-color: white;
+    border: 1px inset black;
+  }
+  
+  .login-signup .container,
+  .login-signup .form-container,
+  .login-signup .toggle-container {
+    background: transparent;
+  }
+  
+  .login-signup .container form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-signup .container form input[type="submit"]:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .login-signup .container select {
+    background-color: #f0f0f0;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .login-signup .container select:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .login-signup .container button {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-signup .container button:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  /* OTP Popup Styles */
+  .otp-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .otp-popup {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+
+  .otp-popup h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+
+  .otp-popup p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+
+  .otp-popup input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .otp-popup input.error {
+    border-color: #ff3333;
+    background-color: #fff2f2;
+  }
+
+  .otp-popup .error-message {
+    color: #ff3333;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .otp-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .otp-buttons button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .otp-buttons button:first-child {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .otp-buttons button:last-child {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+  }
+
+  .otp-buttons button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .login-signup .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .login-signup .input-group input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
