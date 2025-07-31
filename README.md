@@ -37,6 +37,7 @@
 As a **full-stack developer**, I was responsible for designing and implementing the majority of the application:
 
 ### 🔧 Backend (Node.js + Express + MongoDB)
+
 - Architected and structured the entire backend using a clean MVC pattern (`routes`, `controllers`, `models`, `middleware`, `utils`)
 - Built all **MongoDB models** with static and instance methods for security and logic
 - Created advanced aggregation pipelines for **trip ranking & filtering**
@@ -46,6 +47,7 @@ As a **full-stack developer**, I was responsible for designing and implementing 
 - Designed real-time server logic with **Socket.io**
 
 ### 🎨 Frontend (React + Redux + TanStack Query)
+
 - Developed all trip matching and discovery UIs with filtering
 - Built forms using **Formik** and validation with **Yup**
 - Integrated custom APIs for **airport lookup and IATA code fetching**
@@ -53,6 +55,7 @@ As a **full-stack developer**, I was responsible for designing and implementing 
 - Implemented real-time **chat UI**, room joining logic, and message syncing using Socket.io client
 
 ### ❌ Removed
+
 - Blog and Admin panels — these were incomplete and not maintained, so they were removed from the cleaned version
 
 ---
@@ -60,12 +63,14 @@ As a **full-stack developer**, I was responsible for designing and implementing 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React**, **Redux Toolkit**, **TanStack Query**
 - **Formik** & **Yup** for forms & validation
 - **Axios** for HTTP requests
 - **Socket.io-client** for real-time messaging
 
 ### Backend
+
 - **Node.js**, **Express**, **MongoDB**
 - **Socket.io** for real-time communication
 - **Cloudinary**, **Multer** for media handling
@@ -79,16 +84,20 @@ As a **full-stack developer**, I was responsible for designing and implementing 
 To run this project locally:
 
 1. **Download the project**
+
    - Clone the repo or download the ZIP from GitHub
 
 2. **Install dependencies**
+
    ```bash
    cd backend
    npm install
 
    cd ../frontend
    npm install
-  
+
+   ```
+
 3. **Run the project**
    # From backend/
    npm run dev
@@ -96,14 +105,18 @@ To run this project locally:
    npm start
 
 ## Deployment
-    The project will also be deployed online via Render or Vercel
-    → Link coming soon in this README
+
+    → The Backend is deployed on Render and the frontend is deployed on Vercel
+    → https://travel-buddy-ten-theta.vercel.app
 
 ## 📌 Future Work
-  Admin dashboard for user and trip moderation
-  Notification system for new messages and join approvals
-  Trip rating and review system
-  Mobile responsiveness & PWA support
+
+Landing page for the whole project
+Admin dashboard for user and trip moderation
+Notification system for new messages and join approvals
+Trip rating and review system
+Mobile responsiveness & PWA support
 
 ## 🙌 Acknowledgments
+
 Thanks to the project team for the initial collaborative input. The cleaned version is curated to highlight core working features for portfolio purposes.
