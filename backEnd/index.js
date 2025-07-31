@@ -22,6 +22,7 @@ const PORT = process.env.PORT || 3300;
 
 // CORS Configuration
 const allowedOrigins = [
+  "https://travel-buddy-ten-theta.vercel.app", // Frontend vercels URL
   "http://localhost:5173", // Vite dev on PC
   "http://192.168.1.11:5173", // Vite dev on mobile
   "http://localhost:3000",
