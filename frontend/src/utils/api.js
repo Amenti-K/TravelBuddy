@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // Create Axios instance for JSON requests
 const api = axios.create({
-  // baseURL: import.meta.env.VITE_API_URL || "http://localhost:3300",
-  baseURL: "http://localhost:3300",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3300",
   timeout: import.meta.env.VITE_API_TIMEOUT || 30000,
   withCredentials: true,
   headers: {
@@ -17,8 +16,7 @@ const api = axios.create({
 
 // Create separate instance for file uploads
 export const uploadApi = axios.create({
-  // baseURL: import.meta.env.VITE_API_URL || "http://localhost:3300",
-  baseURL: "http://localhost:3300",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3300",
   timeout: import.meta.env.VITE_API_TIMEOUT || 60000,
   withCredentials: true,
   headers: {

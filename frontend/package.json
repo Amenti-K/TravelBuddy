@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "dev:user": "vite --config vite.config.user.js --host",
-    "dev:admin": "vite --config vite.config.admin.js --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
